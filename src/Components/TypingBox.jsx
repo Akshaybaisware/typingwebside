@@ -5,17 +5,17 @@ import { useTestMode } from "../Context/TestModeContext.jsx";
 import Stats from "./Stats.jsx";
 
 const TypingBox = () => {
-  // varibable for timer
+  // for timer
   const {testTime} = useTestMode();
   const [countDown, setCountDown] = useState(testTime);
   
-  // variable for clearout the setinterval function to stop the timer
+  // for stopping  the timer
   const [interValId, setInterValId] = useState(null)
 
   // taking refernce of keys which user type.
   const inputRef = useRef(null);
 
-  // variable for keep track of correct character, incorrect character, extra character , missed character & correct word typed
+  // for knowing the correct character, incorrect character, extra character , missed character & correctword
   const [correctChars, setCorrectChars] = useState(0);
   const [incorrectChars, setInCorrectChars] = useState(0);
   const [missedChars, setMissedChars] = useState(0);
@@ -34,7 +34,7 @@ const TypingBox = () => {
   // variable for Graph data
   const [graphData, setGraphData] = useState([])
   
-  // generate the random words
+  // generating  the random words
   const [wordsArray, setWordsArray] = useState(() => {
     return generate(50);
   });

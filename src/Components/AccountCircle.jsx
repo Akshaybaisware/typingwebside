@@ -4,14 +4,14 @@ import { AppBar, Modal, Tab, Tabs } from '@mui/material';
 import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
 import { useTheme } from '../Context/ThemeContext';
-import {signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, GithubAuthProvider} from 'firebase/auth';
+import {signInWithPopup, GoogleAuthProvider, GithubAuthProvider} from 'firebase/auth';
 import { toast } from 'react-toastify';
 import errorMapping from '../Utils/errorMapping';
 import { auth } from '../firebaseConfig';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { useNavigate } from 'react-router-dom';
-// import { Facebook } from '@mui/icons-material';
+
 
 const AccountCircle = () => {
 
@@ -69,35 +69,6 @@ const AccountCircle = () => {
       })
     }
 
-    //  const faceBookprovider = new FacebookAuthProvider()
-    //   const handleSignUpWithFacebook = () => {
-    //   signInWithPopup(auth, faceBookprovider).then((resolve) => {
-    //     toast.success('Facebook login successful...!', {
-    //         position: "top-right",
-    //         autoClose: 5000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: "light",
-    //         });
-    //         handleClosedModal()
-    //   }).catch((error) => {
-    //     console.log(error)
-    //     toast.error(errorMapping[error.code] ||'Not able to use Facebook Authentication...!', {
-    //         position: "top-right",
-    //         autoClose: 5000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: true,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: "dark",
-    //         });
-    //   })
-
-    // }
 
     const githubProvider = new GithubAuthProvider()
     const handleSignInWithGithub = () => {

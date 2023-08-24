@@ -23,7 +23,7 @@ const Stats = (
 
    const pushDataToDB = () => {
      if(isNaN(accuracy)){
-      toast.error('Invalid Test...!', {
+      toast.error('Invalid Test', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -45,7 +45,7 @@ const Stats = (
       characters : `${correctChar}/${incorrectChar}/${missedChar}/${extrachar}`,
       userId : uid
      }).then((resolve) => {
-        toast.success('Results saved to DataBase...!', {
+        toast.success('Results saved to DataBase', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -56,7 +56,7 @@ const Stats = (
         theme: "light",
         });
      }).catch((error) => {
-        toast.error('Not able to saved results to DataBase...!', {
+        toast.error('Not able to saved results to DataBase', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -75,7 +75,7 @@ const Stats = (
       pushDataToDB();
     }
     else{
-      toast.warning('Logged In to saved results to DataBase...!', {
+      toast.warning('Logged In to saved results to DataBase', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
