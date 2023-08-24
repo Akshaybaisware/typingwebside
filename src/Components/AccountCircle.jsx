@@ -44,7 +44,7 @@ const AccountCircle = () => {
 
     const handleSigUpWithGoogle = () => {
       signInWithPopup(auth, googleProvider).then((resolve) => {
-        toast.success('Google login successful...!', {
+        toast.success('Google login successful', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -56,7 +56,7 @@ const AccountCircle = () => {
             });
             handleClosedModal()
       }).catch((error) => {
-        toast.error(errorMapping[error.code] ||'Not able to use Google Authentication...!', {
+        toast.error(errorMapping[error.code] ||'Not able to use Google Authentication', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -86,7 +86,7 @@ const AccountCircle = () => {
             handleClosedModal()
       }).catch((error) => {
         console.log(error)
-        toast.error(errorMapping[error.code] ||'Not able to use Github Authentication...!', {
+        toast.error(errorMapping[error.code] ||'Not able to use Github Authentication', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -102,7 +102,7 @@ const AccountCircle = () => {
 
     const logout = () => {
        auth.signOut().then((resolve) => {
-        toast.success('Logged out...!', {
+        toast.success('Logged out', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -113,7 +113,7 @@ const AccountCircle = () => {
           theme: "light",
           });
        }).catch((error) => {
-          toast.error('Not able to Logout...!', {
+          toast.error('Not able to Logout', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,

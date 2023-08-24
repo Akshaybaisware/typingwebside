@@ -35,6 +35,7 @@ const UserPage = () => {
      if(!loading && user){
        fetchUserData();
      }
+
      if(!loading && !user){
       navigate('/')
      }

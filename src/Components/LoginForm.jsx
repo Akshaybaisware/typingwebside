@@ -27,7 +27,7 @@ const LoginForm = ({handleClosedModal}) => {
       }
 
       auth.signInWithEmailAndPassword(email, password).then((resolve) => {
-        toast.success('Logged In...!', {
+        toast.success('Logged In', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -39,7 +39,7 @@ const LoginForm = ({handleClosedModal}) => {
           });
           handleClosedModal()
       }).catch((error) => {
-        toast.error(errorMapping[error.code] || 'Invalid Credentials...!', {
+        toast.error(errorMapping[error.code] || 'Invalid Credentials', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
