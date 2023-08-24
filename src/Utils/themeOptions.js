@@ -31,10 +31,12 @@ const IndigoTheme = {
 }
 
 const AquaTheme = {
-    label: "voilet",
-    background: "#E6E6FA",
-    textcolor: "808080",
-    typeBoxText: "#FFFFFF",
+    label: "Aqua",
+    background: "#ADCECBM",
+    // textcolor: "#0000FF",
+    // typeBoxText: "#BOC4DE",
+    textcolor: "#7fa482",
+    typeBoxText: "#c8c2bc",
 }
 
 

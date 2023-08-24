@@ -13,7 +13,7 @@ const SignUpForm = ({handleClosedModal}) => {
     
     const handleUserSubmit = () => {
       if(!email || !password || !cnfPassword){
-        toast.warning('Fill all Details...!', {
+        toast.warning('Fill all Details', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -26,7 +26,7 @@ const SignUpForm = ({handleClosedModal}) => {
         return
       }
       if(password !== cnfPassword){
-        toast.warning('Password MisMatch...!', {
+        toast.warning('Password MisMatch', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -40,7 +40,7 @@ const SignUpForm = ({handleClosedModal}) => {
       }
       
       auth.createUserWithEmailAndPassword(email, password).then((reslove) => {
-        toast.success('User created...!', {
+        toast.success('User created', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -52,7 +52,7 @@ const SignUpForm = ({handleClosedModal}) => {
           });
           handleClosedModal()
       }).catch((error) => {
-        toast.error(errorMapping[error.code] ||'Not able to create User, Please try Again...!', {
+        toast.error(errorMapping[error.code] ||'Not able to create User, Please try Again', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,

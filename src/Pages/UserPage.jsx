@@ -48,7 +48,7 @@ const UserPage = () => {
 
   return (
     <div className='canvas'>
-         <span id='user-pagelogo'><i>Advance Typing</i>Speed</span>
+         <span id='user-pagelogo'>Advance Typing Speed</span>
          <UserInfo totalTestTaken={data.length}/>
       <div className="graph-user-page">
          <Graph graphData={graphData} type='date'/>
