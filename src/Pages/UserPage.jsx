@@ -17,6 +17,7 @@ const UserPage = () => {
 
   const fetchUserData = () => {
      const resultsRef = db.collection('Results');
+     console.log(resultsRef);
      const {uid} = auth.currentUser;
      let tempData = [];
      let tempGraphdata = [];

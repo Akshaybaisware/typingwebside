@@ -52,7 +52,7 @@ const SignUpForm = ({handleClosedModal}) => {
           });
           handleClosedModal()
       }).catch((error) => {
-        toast.error(errorMapping[error.code] ||'Not able to create User, Please try Again', {
+        toast.error(errorMapping[error.code] ||'Not able to create User, Please try Againpret', {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,

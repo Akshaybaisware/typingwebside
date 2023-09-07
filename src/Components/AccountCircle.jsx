@@ -56,6 +56,7 @@ const AccountCircle = () => {
             });
             handleClosedModal()
       }).catch((error) => {
+        console.log(error)
         toast.error(errorMapping[error.code] ||'Not able to use Google Authentication', {
             position: "top-right",
             autoClose: 5000,
@@ -73,7 +74,7 @@ const AccountCircle = () => {
     const githubProvider = new GithubAuthProvider()
     const handleSignInWithGithub = () => {
       signInWithPopup(auth, githubProvider).then((resolve) => {
-        toast.success('Github login successful...!', {
+        toast.success('Github login successful', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
